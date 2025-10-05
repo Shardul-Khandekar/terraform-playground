@@ -18,6 +18,9 @@ resource "aws_iam_role" "lambda_access_role" {
       }
     ]
   })
+  tags = {
+    "cost-allocation" = var.cost-allocation-tag
+  }
 }
 
 # Attach policy to the role
